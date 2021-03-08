@@ -9,7 +9,7 @@ import 'package:wkt_parser/src/proj_wkt.dart';
 export 'package:wkt_parser/src/proj_wkt.dart';
 
 ProjWKT parseWKT(String wkt) {
-  var lisp = Parser.parseString(wkt);
+  var lisp = Parser.parseString(wkt)!;
   var type = lisp.removeAt(0).toString();
   var name = lisp.removeAt(0).toString();
   lisp.insert(0, ['name', name]);
